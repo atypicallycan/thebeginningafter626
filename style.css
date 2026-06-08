@@ -149,6 +149,9 @@ font-family:"Cormorant Garamond";
 margin-top:20px;
 
 opacity:.8;
+font-size:0.9rem;
+font-family: "Orbitron", serif;
+font-style: italic;
 }
 
 blockquote{
@@ -283,7 +286,7 @@ position:absolute;
 
 width:2px;
 
-height:70px;
+height:60px;
 
 background:
 rgba(255,255,255,.25);
@@ -303,7 +306,7 @@ position:absolute;
 
 width:2px;
 
-height:70px;
+height:60px;
 
 background:
 rgba(255,255,255,.25);
@@ -326,12 +329,12 @@ max-width:220px;
 
 .story-card img{
 
-width:90px;
-height:90px;
+width:110px;
+height:110px;
 
 object-fit:contain;
 
-margin-bottom:20px;
+margin-bottom:10px;
 
 filter:
 drop-shadow(0 0 20px rgba(255,255,255,.15));
@@ -359,19 +362,16 @@ font-family:"Cormorant Garamond";
 
 display:block;
 
-opacity:.7;
+opacity:.5;
 
 margin-bottom:10px;
 
 letter-spacing:1px;
+  
+font-family: "Orbitron", serif;
+font-style: italic;
 }
 
-.story-card p{
-
-opacity:.75;
-
-line-height:1.6;
-}
 
 /* =====================
    FUTURE COUNTDOWN
