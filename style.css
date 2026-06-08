@@ -49,11 +49,12 @@ background-image:
 url("assets/images/intro.jpg");
 
 background-size:cover;
-background-position:center 20%;
+background-position:center top;
 
-transform:scale(1.05);
+filter: brightness(.50) blur(.8px);
 
-filter: brightness(.55) blur(1.5px);
+animation: introZoom 18s ease-in-out infinite alternate;
+
 }
 
 .intro-overlay{
@@ -70,6 +71,17 @@ rgba(0,0,0,.85)
 );
 }
 
+@keyframes introZoom{
+
+from{
+transform:scale(1.05);
+}
+
+to{
+transform:scale(1.12);
+}
+
+}
 
 .intro-content{
   
