@@ -22,20 +22,38 @@ body::before{
 content:"";
 
 position:fixed;
-
 inset:0;
 
-background:
-url("assets/images/fog.png");
+background-image:
 
-opacity:.03;
+radial-gradient(circle,
+rgba(255,255,255,.15) 1px,
+transparent 1px);
+
+background-size:
+200px 200px;
+
+opacity:.15;
 
 animation:
-fogMove 60s linear infinite;
+starsMove 40s linear infinite;
 
 pointer-events:none;
 
-z-index:-1;
+z-index:0;
+
+}
+
+@keyframes starsMove{
+
+from{
+transform:translateY(0);
+}
+
+to{
+transform:translateY(-200px);
+}
+
 }
 
 body::after{
@@ -43,22 +61,22 @@ body::after{
 content:"";
 
 position:fixed;
-
 inset:0;
 
 background:
+url("assets/images/noise.png");
 
-linear-gradient(
-90deg,
-transparent,
-rgba(255,255,255,.015),
-transparent
-);
+opacity:.03;
+
+mix-blend-mode:screen;
 
 pointer-events:none;
 
-z-index:-1;
+z-index:0;
+
 }
+
+background-repeat:repeat;
 
 section{
 
