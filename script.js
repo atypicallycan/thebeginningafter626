@@ -12,6 +12,31 @@ openBtn.addEventListener("click", () => {
     music.play();
 });
 
+// COUPLE BIO
+
+const coupleToggle =
+document.getElementById("coupleToggle");
+
+const coupleContent =
+document.getElementById("coupleContent");
+
+coupleToggle.addEventListener("click", () => {
+
+if(coupleContent.style.display === "grid"){
+
+    coupleContent.style.display = "none";
+    coupleToggle.textContent =
+    "Reveal Their Story";
+
+}else{
+
+    coupleContent.style.display = "grid";
+    coupleToggle.textContent =
+    "Hide Their Story";
+
+}
+
+});
 
 // COUNTDOWN
 
