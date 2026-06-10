@@ -88,14 +88,12 @@ String(seconds).padStart(2,"0");
 
 },1000);
 
-
-
 // SCROLL REVEAL
 
 const reveals =
 document.querySelectorAll(".reveal");
 
-window.addEventListener("scroll",()=>{
+function revealOnScroll(){
 
     reveals.forEach(item=>{
 
@@ -105,11 +103,19 @@ window.addEventListener("scroll",()=>{
         if(top < window.innerHeight - 100){
 
             item.classList.add("active");
+
         }
 
     });
 
-});
+}
+
+window.addEventListener(
+"scroll",
+revealOnScroll
+);
+
+revealOnScroll();
 
 // WEDDING GIFT BOX
 
