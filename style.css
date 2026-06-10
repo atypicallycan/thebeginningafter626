@@ -768,6 +768,9 @@ letter-spacing:2px;
 position:relative;
 
 overflow:hidden;
+
+width:100%;
+
 }
 
 .gallery-mask::before,
@@ -775,16 +778,18 @@ overflow:hidden;
 
 content:"";
 
-display:none;
-  
+position:absolute;
+
 top:0;
+bottom:0;
 
 width:180px;
-height:100%;
+
+pointer-events:none;
 
 z-index:10;
 
-pointer-events:none;
+overflow:hidden;
 }
 
 .gallery-mask::before{
