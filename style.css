@@ -17,67 +17,6 @@ font-family:Inter,sans-serif;
 overflow-x:hidden;
 }
 
-body::before{
-
-content:"";
-
-position:fixed;
-inset:0;
-
-background-image:
-
-radial-gradient(circle,
-rgba(255,255,255,.15) 1px,
-transparent 1px);
-
-background-size:
-200px 200px;
-
-opacity:.15;
-
-animation:
-starsMove 40s linear infinite;
-
-pointer-events:none;
-
-z-index:0;
-
-}
-
-@keyframes starsMove{
-
-from{
-transform:translateY(0);
-}
-
-to{
-transform:translateY(-200px);
-}
-
-}
-
-body::after{
-
-content:"";
-
-position:fixed;
-inset:0;
-
-background:
-url("assets/images/noise.png");
-
-opacity:.03;
-
-mix-blend-mode:screen;
-
-pointer-events:none;
-
-z-index:0;
-
-}
-
-background-repeat:repeat;
-
 section{
 
 padding:120px 10%;
@@ -85,7 +24,6 @@ padding:120px 10%;
 
 #main{
 display:none;
-  
 }
 
 #intro{
