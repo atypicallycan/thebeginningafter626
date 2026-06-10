@@ -17,6 +17,49 @@ font-family:Inter,sans-serif;
 overflow-x:hidden;
 }
 
+body::before{
+
+content:"";
+
+position:fixed;
+
+inset:0;
+
+background:
+url("assets/images/fog.png");
+
+opacity:.03;
+
+animation:
+fogMove 60s linear infinite;
+
+pointer-events:none;
+
+z-index:-1;
+}
+
+body::after{
+
+content:"";
+
+position:fixed;
+
+inset:0;
+
+background:
+
+linear-gradient(
+90deg,
+transparent,
+rgba(255,255,255,.015),
+transparent
+);
+
+pointer-events:none;
+
+z-index:-1;
+}
+
 section{
 
 padding:120px 10%;
@@ -24,6 +67,7 @@ padding:120px 10%;
 
 #main{
 display:none;
+  
 }
 
 #intro{
