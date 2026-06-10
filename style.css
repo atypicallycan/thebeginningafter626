@@ -324,9 +324,9 @@ display:none;
 margin-top:60px;
 
 grid-template-columns:
-repeat(auto-fit,minmax(320px,1fr));
+repeat(auto-fit,minmax(300px,1fr));
 
-gap:40px;
+gap:35px;
 
 }
 
@@ -361,18 +361,19 @@ flex-shrink:0;
 
 .role{
   
-font-size:.75rem;
+font-size:.7rem;
 letter-spacing:2px;
-opacity:.6;
+opacity:.7;
 
 }
 
 .card-info h3{
 
-font-size:1.1rem;
-margin:8px 0 4px;
+font-size:1rem;
+margin:5px 0 2px;
 font-family:
 "Cormorant Garamond";
+letter-spacing:-0.2px;
 
 }
 
@@ -381,8 +382,8 @@ font-family:
 font-family:
 "Cormorant Garamond";
 font-style:italic;
-font-size:1rem;
-opacity:.7;
+font-size:.8rem;
+opacity:.5;
 margin-bottom:25px;
 
 }
