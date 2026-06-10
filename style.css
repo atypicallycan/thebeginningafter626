@@ -417,7 +417,7 @@ text-align:center;
 
 font-size:3rem;
 
-margin-bottom:100px;
+margin-bottom:50px;
 
 font-family:"Cormorant Garamond";
 }
@@ -611,10 +611,10 @@ font-style: italic;
 ===================== */
 
 .countdown{
-
+margin-top:50px;
 text-align:center;
-
 position:relative;
+margin-bottom:50px;
 }
 
 .countdown-subtitle{
@@ -740,7 +740,6 @@ rgba(255,255,255,.08);
 ===================== */
 
 .gallery{
-
 position:relative;
 
 padding:120px 0;
