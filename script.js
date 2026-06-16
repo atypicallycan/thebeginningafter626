@@ -204,10 +204,13 @@ document.getElementById("wishBtn");
 const wishesList =
 document.getElementById("wishesList");
 
+console.log("Loading wishes...");
 loadWishes();
 
 wishBtn.addEventListener("click", async () => {
 
+console.log("Send clicked");
+  
 const name =
 document.getElementById("wishName")
 .value.trim();
