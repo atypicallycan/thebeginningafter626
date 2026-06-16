@@ -1411,6 +1411,7 @@ cursor:pointer;
     color:#090909;
 }
 
+
 .wishes-list{
 
     margin-top:40px;
@@ -1471,6 +1472,22 @@ cursor:pointer;
     opacity:.7;
 
     font-size:.9rem;
+}
+
+.wish-date{
+
+margin-top:10px;
+
+font-size:.65rem;
+
+opacity:.45;
+
+font-family:'Orbitron',serif;
+
+letter-spacing:1.5px;
+
+text-transform:uppercase;
+
 }
 
 .reveal{
