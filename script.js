@@ -284,12 +284,16 @@ card.innerHTML = `
 ${data.message}
 </p>
 
+<div class="wish-meta">
+
 <span class="wish-author">
 ✦ ${data.name}
 </span>
 
-<div class="wish-date">
+<span class="wish-date">
 ${formatted}
+</span>
+
 </div>
 `;
 
