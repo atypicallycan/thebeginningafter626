@@ -1477,14 +1477,14 @@ cursor:pointer;
 .wish-meta{
 
 display:flex;
-
 justify-content:space-between;
-
 align-items:center;
 
-margin-top:14px;
+margin-top:16px;
+padding-top:12px;
 
-gap:15px;
+border-top:
+1px solid rgba(255,255,255,.06);
 
 }
 
