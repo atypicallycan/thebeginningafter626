@@ -1474,17 +1474,37 @@ cursor:pointer;
     font-size:.9rem;
 }
 
+.wish-meta{
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+
+margin-top:14px;
+
+gap:15px;
+
+}
+
+.wish-author{
+
+opacity:.7;
+
+font-size:.9rem;
+
+}
+
 .wish-date{
 
-opacity:.35;
+opacity:.4;
 
-font-size:.65rem;
+font-size:.7rem;
 
 font-family:'Orbitron',serif;
 
-letter-spacing:1px;
-
-text-transform:uppercase;
+white-space:nowrap;
 
 }
 
