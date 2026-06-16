@@ -1476,15 +1476,13 @@ cursor:pointer;
 
 .wish-date{
 
-margin-top:10px;
+opacity:.35;
 
 font-size:.65rem;
 
-opacity:.45;
-
 font-family:'Orbitron',serif;
 
-letter-spacing:1.5px;
+letter-spacing:1px;
 
 text-transform:uppercase;
 
