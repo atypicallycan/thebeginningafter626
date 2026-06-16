@@ -264,13 +264,14 @@ const date =
 new Date(data.createdAt);
 
 const formatted =
-date.toLocaleString("en-US",{
+`${date.toLocaleDateString("en-GB",{
 day:"numeric",
 month:"short",
 year:"numeric",
+})} • ${date.toLocaleTimeString("en-GB",{
 hour:"2-digit",
 minute:"2-digit"
-});
+})}`;
   
 console.log(formatted);
   
