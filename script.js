@@ -1,3 +1,32 @@
+import { initializeApp }
+from "https://www.gstatic.com/firebasejs/12.14.0/firebase-app.js";
+
+import {
+getFirestore,
+collection,
+addDoc,
+getDocs,
+query,
+orderBy
+}
+from "https://www.gstatic.com/firebasejs/12.14.0/firebase-firestore.js";
+
+const firebaseConfig = {
+apiKey: "AIzaSyCmwff7w46LoXaloTnnpsCCpPZ3FsByv-0",
+authDomain: "thebeginningafter626.firebaseapp.com",
+projectId: "thebeginningafter626",
+storageBucket: "thebeginningafter626.firebasestorage.app",
+messagingSenderId: "835036857497",
+appId: "1:835036857497:web:b6934239fe421985676408"
+};
+
+const app =
+initializeApp(firebaseConfig);
+
+const db =
+getFirestore(app);
+
+
 const openBtn = document.getElementById("openBtn");
 const intro = document.getElementById("intro");
 const main = document.getElementById("main");
@@ -173,33 +202,69 @@ document.getElementById("wishBtn");
 const wishesList =
 document.getElementById("wishesList");
 
-wishBtn.addEventListener("click", () => {
+loadWishes();
 
-    const name =
-    document.getElementById("wishName").value;
+wishBtn.addEventListener("click", async () => {
 
-    const message =
-    document.getElementById("wishMessage").value;
+const name =
+document.getElementById("wishName")
+.value.trim();
 
-    if(!name || !message) return;
+const message =
+document.getElementById("wishMessage")
+.value.trim();
 
-    const card =
-    document.createElement("div");
+if(!name || !message) return;
 
-    card.classList.add("wish-card");
+await addDoc(
+collection(db,"wishes"),
+{
+name,
+message,
+createdAt: Date.now()
+}
+);
 
-    card.innerHTML = `
-        <p class="wish-text">
-            ${message}
-        </p>
+document.getElementById("wishName").value = "";
+document.getElementById("wishMessage").value = "";
 
-        <span class="wish-author">
-            - ${name}
-        </span>
-    `;
+loadWishes();
 
-    wishesList.prepend(card);
-
-    document.getElementById("wishName").value = "";
-    document.getElementById("wishMessage").value = "";
 });
+
+async function loadWishes(){
+
+wishesList.innerHTML = "";
+
+const q = query(
+collection(db,"wishes"),
+orderBy("createdAt","desc")
+);
+
+const snapshot =
+await getDocs(q);
+
+snapshot.forEach((doc)=>{
+
+const data = doc.data();
+
+const card =
+document.createElement("div");
+
+card.classList.add("wish-card");
+
+card.innerHTML = `
+<p class="wish-text">
+${data.message}
+</p>
+
+<span class="wish-author">
+✦ ${data.name}
+</span>
+`;
+
+wishesList.appendChild(card);
+
+});
+
+}
