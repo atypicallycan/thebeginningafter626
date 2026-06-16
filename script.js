@@ -209,6 +209,9 @@ loadWishes();
 
 wishBtn.addEventListener("click", async () => {
 
+wishBtn.disabled = true;
+wishBtn.textContent = "Sending...";
+  
 console.log("Send clicked");
   
 const name =
@@ -235,6 +238,9 @@ document.getElementById("wishMessage").value = "";
 
 loadWishes();
 
+wishBtn.disabled = false;
+wishBtn.textContent = "Send Wish";
+
 });
 
 async function loadWishes(){
@@ -252,6 +258,18 @@ await getDocs(q);
 snapshot.forEach((doc)=>{
 
 const data = doc.data();
+const date =
+new Date(data.createdAt);
+
+const formatted =
+date.toLocaleString("en-US",{
+day:"numeric",
+month:"short",
+year:"numeric",
+hour:"2-digit",
+minute:"2-digit"
+});
+  
 
 const card =
 document.createElement("div");
@@ -266,6 +284,10 @@ ${data.message}
 <span class="wish-author">
 ✦ ${data.name}
 </span>
+
+<div class="wish-date">
+${formatted}
+</div>
 `;
 
 wishesList.appendChild(card);
