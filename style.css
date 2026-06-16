@@ -1473,6 +1473,20 @@ cursor:pointer;
     font-size:.9rem;
 }
 
+.wish-date{
+
+margin-top:12px;
+
+font-size:.65rem;
+
+opacity:.45;
+
+letter-spacing:1px;
+
+font-family:'Orbitron',serif;
+
+}
+
 .reveal{
 
 opacity:0;
