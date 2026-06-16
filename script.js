@@ -26,6 +26,8 @@ initializeApp(firebaseConfig);
 const db =
 getFirestore(app);
 
+console.log("Firebase Connected");
+
 
 const openBtn = document.getElementById("openBtn");
 const intro = document.getElementById("intro");
