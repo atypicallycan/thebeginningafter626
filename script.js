@@ -150,6 +150,31 @@ revealOnScroll
 
 revealOnScroll();
 
+// GALLERY PAUSE ONLY ON IMAGE
+
+const galleryTrack =
+document.querySelector(".gallery-track");
+
+document
+.querySelectorAll(".gallery-item")
+.forEach(item=>{
+
+item.addEventListener("mouseenter",()=>{
+
+galleryTrack.style.animationPlayState =
+"paused";
+
+});
+
+item.addEventListener("mouseleave",()=>{
+
+galleryTrack.style.animationPlayState =
+"running";
+
+});
+
+});
+
 // WEDDING GIFT BOX
 
 const giftToggle =
