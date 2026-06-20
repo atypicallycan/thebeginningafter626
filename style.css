@@ -831,10 +831,7 @@ animation: galleryScroll 40s linear infinite;
 will-change:transform;
 }
 
-.gallery:hover .gallery-track{
 
-animation-play-state:paused;
-}
 
 /* card */
 
@@ -888,6 +885,18 @@ transform:scale(1.08);
 filter:
 brightness(1)
 contrast(1.1);
+}
+
+.gallery-item:hover img{
+
+transform:scale(1.08);
+
+}
+
+.gallery-item:hover{
+
+opacity:1;
+
 }
 
 /* smooth infinite */
