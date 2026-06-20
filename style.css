@@ -116,6 +116,18 @@ font-size:2rem;
 opacity:.5;
 }
 
+.intro-date{
+
+    font-family:"Orbitron", sans-serif;
+    font-size:.7rem;
+    font-weight:400;
+    letter-spacing:3.5px;
+    text-transform:uppercase;
+    opacity:.65;
+    margin-top:10px;
+
+}
+
 .small{
 
 letter-spacing:6px;
