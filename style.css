@@ -1183,9 +1183,9 @@ display:grid;
 grid-template-columns:
 repeat(auto-fit,minmax(320px,1fr));
 
-gap:40px;
+gap:35px;
 
-margin-top:60px;
+margin-top:50px;
 
 }
 
@@ -1226,7 +1226,7 @@ object-fit:cover;
 
 border-radius:18px;
 
-margin-bottom:25px;
+margin-bottom:20px;
 
 transition:.6s;
 
@@ -1274,7 +1274,7 @@ line-height:1.8;
 
 opacity:.75;
 
-margin-bottom:30px;
+margin-bottom:10px;
 
 }
 
