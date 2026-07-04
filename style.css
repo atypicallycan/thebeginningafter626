@@ -1499,7 +1499,13 @@ transform:scale(1.05);
 
 .hero-photo img{
 
-height:320px;
+display:block;
+
+width:100%;
+
+aspect-ratio:16/9;
+
+object-fit:cover;
 
 }
 
