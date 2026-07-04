@@ -328,3 +328,174 @@ wishesList.appendChild(card);
 });
 
 }
+
+// FADE EFFECT FOR FILM
+
+let fadeOutInterval;
+let fadeInInterval;
+
+function fadeOutMusic(){
+
+clearInterval(fadeOutInterval);
+clearInterval(fadeInInterval);
+
+fadeOutInterval = setInterval(()=>{
+
+if(music.volume > 0.05){
+
+music.volume -= 0.05;
+
+}else{
+
+music.volume = 0;
+
+music.pause();
+
+clearInterval(fadeOutInterval);
+
+}
+
+},40);
+
+}
+
+function fadeInMusic(){
+
+clearInterval(fadeOutInterval);
+clearInterval(fadeInInterval);
+
+music.volume = 0;
+music.play();
+
+fadeInInterval = setInterval(()=>{
+
+if(music.volume < 0.95){
+
+music.volume += 0.05;
+
+}else{
+
+music.volume = 1;
+
+clearInterval(fadeInInterval);
+
+}
+
+},40);
+
+}
+
+// SHORT FILM
+
+const videoModal =
+document.getElementById("videoModal");
+
+const filmPlayer =
+document.getElementById("filmPlayer");
+
+const closeVideo =
+document.getElementById("closeVideo");
+
+const watchButtons =
+document.querySelectorAll(".watch-btn");
+
+watchButtons.forEach(btn=>{
+
+    btn.addEventListener("click",()=>{
+
+        fadeOutMusic();
+
+        filmPlayer.pause();
+
+        filmPlayer.currentTime = 0;
+
+        filmPlayer.src =
+        btn.dataset.video;
+
+        filmPlayer.load();
+
+        videoModal.style.display = "flex";
+      
+        filmPlayer.onloadeddata = null;
+
+        filmPlayer.onloadeddata = ()=>{
+
+            filmPlayer.play();
+
+        };
+
+    });
+
+});   
+
+closeVideo.addEventListener("click",()=>{
+
+filmPlayer.pause();
+
+filmPlayer.currentTime = 0;
+
+filmPlayer.removeAttribute("src");
+
+filmPlayer.load();
+
+videoModal.style.display="none";
+
+fadeInMusic();
+
+});
+
+filmPlayer.addEventListener("ended",()=>{
+
+filmPlayer.pause();
+
+filmPlayer.currentTime = 0;
+
+filmPlayer.removeAttribute("src");
+
+filmPlayer.load();
+
+videoModal.style.display="none";
+
+fadeInMusic();
+
+});
+
+document.addEventListener("keydown",(e)=>{
+
+if(e.key==="Escape"){
+
+filmPlayer.pause();
+
+filmPlayer.currentTime = 0;
+
+filmPlayer.removeAttribute("src");
+
+filmPlayer.load();
+
+videoModal.style.display="none";
+
+fadeInMusic();
+
+}
+
+});
+
+videoModal.addEventListener("click",(e)=>{
+
+if(e.target===videoModal){
+
+filmPlayer.pause();
+
+filmPlayer.currentTime = 0;
+
+filmPlayer.removeAttribute("src");
+
+filmPlayer.load();
+
+videoModal.style.display="none";
+
+fadeInMusic();
+
+}
+
+});
